@@ -1,0 +1,24 @@
+{% extends 'templates/master.jinja2' %}
+{% block body %}
+<div>
+<form action="." method="post">
+	<div>
+		<div>Title</div>
+		<div><input type="text" name="doc_title" value="{{ doc.title }}" /></div>
+	</div>
+	<div>
+		<div>Markdown</div>
+		<div><textarea name="doc_md" >{{ doc.md }}</textarea></div>
+	</div>
+	<div>
+		<div>Tags</div>
+		<div><input type="text" name="doc_tags" value="{{ doc.tags_str }}" /></div>
+	</div>
+	<div>
+		<div>
+			<input type="submit" value="Submit" />
+		</div>
+	</div>
+</form>
+</div>
+{% endblock %}

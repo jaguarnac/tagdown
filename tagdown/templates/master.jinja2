@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title%}TagDown{% endblock %}</title>
+		{% block css %}
+		<link rel="stylesheet" href="{{'tagdown:static/css/bootstrap-responsive.css'|static_url}}" />
+		{% endblock %}
+		<script language="JavaScript" type="text/javascript"
+		 data-main="{{ 'tagdown:static/js/main.js'|static_url }}" 
+		 src="{{ 'tagdown:static/js/require.js'|static_url }}"></script>
+	</head>
+	<body>
+		<div class="container">
+			{% block body %}{% endblock %}
+		</div>
+	{% block js%}
+	{% endblock %}
+	</body>
+</html>
