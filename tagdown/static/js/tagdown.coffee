@@ -1,6 +1,5 @@
 define ['jquery','cs!views/apphome'],
 	($, AppHomeView)-> 
-		'use strict'
-		console.log new AppHomeView ( 
+		app = new AppHomeView ( 
 			el: $('#main')
 		)

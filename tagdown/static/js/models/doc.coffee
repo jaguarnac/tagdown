@@ -1,12 +1,16 @@
-define ['underscore','backbone'],
-(_, Backbone) ->
-	'use strict'
+define ['underscore','backbone', 'showdown'],
+(_, Backbone, Showdown) ->
 	
 	Doc = Backbone.Model.extend
 		'initialize': () ->
-			@id = @getID()  
+			@set('id', @getID())
+			@set('html', @getHTML())
 		'getID': () ->
 			@get('_id').$oid
+		'getHTML': () ->
+			md = @get('md') or ''
+			html = new Showdown.converter().makeHtml(md)
+			return html
 			
 	DocList = Backbone.Collection.extend
 		'url': 'rest/docs/'

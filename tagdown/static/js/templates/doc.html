@@ -1,5 +1,7 @@
-<h2>{{ doc.title }}</h2>
+<div id="doc_<%= doc.id %>">
+<h2><%=doc.title %></h2>
 	<p>
-		{{ doc.md }}
+		<%= doc.html %>
 	</p>
-<div>{{ doc.tags }}</div>
+<div><%=doc.tags %></div>
+</div>
