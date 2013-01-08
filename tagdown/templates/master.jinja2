@@ -5,6 +5,7 @@
 		{% block css %}
 		<link rel="stylesheet" href="{{'tagdown:static/css/bootstrap.css'|static_url}}" />
 		<link rel="stylesheet" href="{{'tagdown:static/css/bootstrap-responsive.css'|static_url}}" />
+		<link rel="stylesheet" href="{{'tagdown:static/css/styles.css'|static_url}}" />
 		{% endblock %}
 		<script language="JavaScript" type="text/javascript"
 		 data-main="{{ 'tagdown:static/js/main.js'|static_url }}" 
@@ -15,10 +16,7 @@
 		<div class="container">
 			<div class="navbar navbar-inverse">
 				<div class="navbar-inner">
-					<ul class="nav">
-						<li><a href="#">Home</a></li>
-						<li><a href="/docform/">Work</a></li>
-					</ul>
+					<div class="brand">TagDown</div>
 					<form class="navbar-form pull-right">
 					  <input type="text" class="span2">
 					  <button type="submit" class="btn">Submit</button>
