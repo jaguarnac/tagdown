@@ -1,3 +1,5 @@
+import site
+site.addsitedir('/opt/tagdown/lib/python2.7/site-packages')
 from pyramid.paster import get_app
 application = get_app(
-  '/lab/tagdown/development.ini', 'main')
+  '/opt/tagdown/development.ini', 'main')
